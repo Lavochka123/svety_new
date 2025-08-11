@@ -1,0 +1,6 @@
+Flask>=3.0
+python-telegram-bot>=20.6,<21
+Pillow>=10.0
+qrcode[pil]>=7.4
+python-dotenv>=1.0
+gunicorn>=21.2
