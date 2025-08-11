@@ -1,0 +1,17 @@
+[Unit]
+Description=Svety Telegram Bot (polling)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=debian
+Group=debian
+WorkingDirectory=/home/debian/telegram_bots/svety
+EnvironmentFile=-/home/debian/telegram_bots/svety/.env
+ExecStart=/home/debian/telegram_bots/svety/venv/bin/python -m svety.bot.main
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
